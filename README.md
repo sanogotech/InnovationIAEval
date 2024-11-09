@@ -209,3 +209,74 @@ source innov/bin/activate
 # les bibliothèques que j'ai installé:  
 
 pip install pandas scikit-learn openpyxl
+
+----------------------------
+
+To provide a complete example with sample input files and an example output, here’s a structure you can use. This includes creating two input files (`a.csv` and `tableau.csv`) and an example of expected results in an `output_example.csv`.
+
+### Project Structure
+
+```plaintext
+project_directory/
+├── main_notebook.ipynb         # Your Jupyter Notebook file
+├── requirements.txt            # Dependencies file
+├── input_files/                # Folder to store input data files
+│   ├── a.csv                   # First sample input file
+│   └── tableau.csv             # Second sample input file
+├── output_files/               # Folder to store example output files
+│   └── output_example.csv      # Example of expected output file
+├── README.md                   # README with project details
+```
+
+### Example Files
+
+#### 1. `input_files/a.csv`
+
+This file could contain individual entries or basic data points to be processed. Here’s a simple example:
+
+```csv
+id,name,age,score
+1,Alice,24,85
+2,Bob,27,90
+3,Charlie,22,78
+4,Diana,29,92
+5,Eve,26,88
+```
+
+#### 2. `input_files/tableau.csv`
+
+This file might represent a more complex table with attributes, weights, or criteria that will be used in calculations. Here’s an example format:
+
+```csv
+criteria,weight,maximum_score
+Age,0.2,30
+Score,0.8,100
+```
+
+### Example Output
+
+#### `output_files/output_example.csv`
+
+The output could show processed results, perhaps with rankings or adjusted scores based on input data. Here’s an example of what the output might look like:
+
+```csv
+id,name,age,score,adjusted_score,rank
+4,Diana,29,92,88.6,1
+2,Bob,27,90,86.0,2
+5,Eve,26,88,84.4,3
+1,Alice,24,85,82.0,4
+3,Charlie,22,78,74.6,5
+```
+
+In this example:
+- `adjusted_score` is calculated based on the weighted criteria in `tableau.csv`.
+- `rank` shows the position of each entry after processing.
+
+### Usage Instructions
+
+To run the project:
+1. Place `a.csv` and `tableau.csv` files in the `input_files` folder.
+2. Open and run `main_notebook.ipynb`, which should read the input files, process the data, and generate results.
+3. The processed data should save in the `output_files` folder as a new `.csv` file.
+
+Let me know if you'd like further customization on the structure or files!
